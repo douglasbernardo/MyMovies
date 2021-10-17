@@ -13,10 +13,8 @@
         </div>
         <div class="carrosel-desenhos">
             <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <a href="/details?id=<?php $id=8; echo $id ?>"><img class="box-desenho w-75" src="assets/images/round6.jpg" alt="Scooby Doo Cade Você?"></a>
-                </div>
-                <div class="item"><img class="box-desenho w-75" src="assets/images/st.jpeg" alt="Os Jetsons"></div>
+                <div class="item"><img class="box-desenho w-75" src="assets/images/round6.jpg" alt="Round6"></div>
+                <div class="item"><img class="box-desenho w-75" src="assets/images/st.jpeg" alt="Stranger Things"></div>
                 <div class="item"><img class="box-desenho w-75" src="assets/images/riverdale.jpg" alt="Os Flintstones"></div>
                 <div class="item"><img class="box-desenho w-75" src="assets/images/la.jpg" alt="Johny O Bravo"></div>
                 <div class="item"><img class="box-desenho w-75" src="assets/images/sexEducation.jpg" alt="Turma Do Pateta"></div>
