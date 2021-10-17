@@ -1,0 +1,20 @@
+{
+    "name": "douglas-bernardo/gerenciador-cursos",
+    "description": "Uma plataforma onde o usuario coloca filmes e series que já assistiu",
+    "autoload": {
+        "psr-4": {
+            "DouglasBernardo\\MyMovies\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Douglas Bernardo de Melo",
+            "email": "douglasbernardomelo@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.6.2",
+        "symfony/yaml": "2.*",
+        "symfony/cache": "^5.3"
+    }
+}
