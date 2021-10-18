@@ -1,5 +1,4 @@
 <?php require_once __DIR__ . './inicioHtml.php' ?>
-
         <div class="carrosel-desenhos">
             <div class="owl-carousel owl-theme">
                 <div class="item"><img class="box-desenho w-75" src="assets/images/arrow.jpg" alt="Desenho Bob Esponja"></div>

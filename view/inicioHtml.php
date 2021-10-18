@@ -13,6 +13,10 @@
     <body style="background-color: black;">
         <nav class="navbar navbar-dark bg-dark">
             <a href="/home" class="navbar-brand"><h1 id="titleH1" class="display-4">MyMovies</h1></a>
+            <?php if (isset($_SESSION['usuario_logado'])) :?>
+            <h4>Bem vindo usuario: <?php 
+                echo $_SESSION['usuario']
+            ?></h4>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a href="/logout">
@@ -20,4 +24,5 @@
                     </a>
                 </li>
             </ul>
+            <?php endif ?>
         </nav>

@@ -10,17 +10,9 @@ if(!array_key_exists($caminho,$rotas)){
     return;
 }
 
-/*
+
 session_start();
 
-$ehRotaLogin = stripos($caminho,'login');//procura a string login dentro do caminho da url
-
-if(!isset($_SESSION['usuario_logado']) && $ehRotaLogin === false) //e se não encontrar verifica se esta logado ou não
-{
-    header("Location: /login");
-    return;
-}
-*/
 $classeControladora = $rotas[$caminho];
 /** 
  * @var Requisicao

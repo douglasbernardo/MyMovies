@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/../inicioHtml.php' ?>
 
 <div class="container mt-4">
-    <form>
+    <form method="POST" action="/realizaLogin">
         <div class="form-group">
             <label for="email" class="text-primary">Email </label>
             <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">

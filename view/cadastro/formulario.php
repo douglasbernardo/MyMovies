@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/../inicioHtml.php' ?>
 
 <div class="container mt-4">
-    <form method="post" action="">
+    <form method="POST" action="/realizaCadastro">
         <div class="form-group">
             <label for="nome" class="text-primary">Nome</label>
             <input type="text" class="form-control" name="nome" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">

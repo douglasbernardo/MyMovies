@@ -2,7 +2,8 @@
 
 namespace DouglasBernardo\MyMovies\Helper;
 
-trait FlashMessages{
+trait FlashMessages
+{
 
     public function defineMensagem(string $tipo,string $mensagem)
     {
