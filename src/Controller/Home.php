@@ -14,6 +14,7 @@ class Home implements Requisicao
         $user = new Usuario();
         if(!$user->Logado()){
             header("Location: /cadastro");
+            return;
         }
     }
 

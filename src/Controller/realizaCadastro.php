@@ -4,10 +4,13 @@ namespace DouglasBernardo\MyMovies\Controller;
 
 
 use DouglasBernardo\MyMovies\Entity\Usuario;
+use DouglasBernardo\MyMovies\Helper\FlashMessages;
 use DouglasBernardo\MyMovies\Infra\Queries;
 
 class realizaCadastro implements Requisicao
 {
+
+    use FlashMessages;
 
     public function __construct()
     {
@@ -21,21 +24,25 @@ class realizaCadastro implements Requisicao
         $senha = filter_input(INPUT_POST,'senha',FILTER_SANITIZE_STRING);
 
         if($nome == "" && $email == "" && $senha == ""){
-            echo "Os dados devem ser preenchidos";
+            $this->defineMensagem("danger","Os dados devem ser preenchidos");
+            header("Location: /cadastro");
             return;
         }
 
         if($nome === ""){
-            echo "nome não pode ser vazio";
+            $this->defineMensagem("danger","nome não pode ser vazio");
+            header("Location: /cadastro");
             return;
         }
         if($email == ""){
-            echo "O E-mail não pode ser vazio";
+            $this->defineMensagem("danger","O E-mail não pode ser vazio");
+            header("Location: /cadastro");
             return;
         }
 
         if($senha === ""){
-            echo "A senha não pode ser vazia";
+            $this->defineMensagem("danger","A senha não pode ser vazia");
+            header("Location: /cadastro");
             return;
         }
 
@@ -47,7 +54,16 @@ class realizaCadastro implements Requisicao
             "senha"=> password_hash($usuarios->setSenha($senha),PASSWORD_DEFAULT)
         ];
 
+        
+        if($usuarios->usuarioExiste($email)){
+            $this->defineMensagem("danger","E-mail já existente");
+            header("Location: /cadastro");
+            return;
+        }
+        
         $_SESSION['usuario'] = $this->db->insert($values);
+        $_SESSION['usuario_nome'] = $values["nome"];
+        $_SESSION['usuario_email'] = $values["email"];
         $_SESSION['usuario_logado'] = true;
 
         header("Location: /home");

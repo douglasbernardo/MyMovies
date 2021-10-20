@@ -1,6 +1,15 @@
 <?php require_once __DIR__ . '/../inicioHtml.php' ?>
 
 <div class="container mt-4">
+<?php if (isset($_SESSION['mensagem'])) : ?>
+            <div class="alert alert-<?= $_SESSION['tipo']; ?>">
+                <?= $_SESSION['mensagem']; ?>
+            </div>
+    <?php 
+        unset($_SESSION['mensagem']);
+        unset($_SESSION['tipo']);
+        endif;
+    ?>
     <form method="POST" action="/realizaCadastro">
         <div class="form-group">
             <label for="nome" class="text-primary">Nome</label>

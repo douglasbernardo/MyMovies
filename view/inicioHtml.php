@@ -14,13 +14,11 @@
         <nav class="navbar navbar-dark bg-dark">
             <a href="/home" class="navbar-brand"><h1 id="titleH1" class="display-4">MyMovies</h1></a>
             <?php if (isset($_SESSION['usuario_logado'])) :?>
-            <h4>Bem vindo usuario: <?php 
-                echo $_SESSION['usuario']
-            ?></h4>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
+                <?php echo "<strong>".ucwords($_SESSION['usuario_nome'])."</strong>" ?>
                     <a href="/logout">
-                        <i class="fas fa-cog text-info" style="font-size: 25px;"></i>
+                    <i class="fas fa-sign-out-alt" style="font-size: 30px;"></i>
                     </a>
                 </li>
             </ul>

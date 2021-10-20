@@ -2,10 +2,10 @@
 
 namespace DouglasBernardo\MyMovies\Entity;
 
-use DouglasBernardo\MyMovies\Infra\Conexao;
+use DouglasBernardo\MyMovies\Helper\Conexao;
+use DouglasBernardo\MyMovies\Helper\FlashMessages;
 use DouglasBernardo\MyMovies\Infra\Queries;
 use PDO;
-use Symfony\Component\Console\Event\ConsoleEvent;
 
 class Usuario
 {
@@ -14,10 +14,8 @@ class Usuario
     private $email;
     private $senha;
 
-    public function __construct()
-    {
-        $this->db = new Queries();
-    }
+    use Conexao;
+    use FlashMessages;
 
     public function getId(){
         $this->id;
@@ -50,9 +48,9 @@ class Usuario
        return $this->senha = $senha;
     }
 
-    public function senhaEstaCorreta(string $senhaPura): bool
+    public function verifyPassword(string $senha):bool
     {
-        return password_verify($senhaPura, $this->senha);
+        return password_verify($senha,$this->senha);
     }
 
     public function Logado(){
@@ -62,18 +60,31 @@ class Usuario
         return false;
     }
 
-    public function Logar($email,$senha)
+    public function Logar($email,$senha):bool
     {
-        $sql = (new Queries())->select($email,$senha);
-        $sql->bindValue(":email",$email);
-        $sql->bindValue(":senha",$senha);
+        $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+        $sql = $this->con->query($sql);
         $sql->execute();
 
         if($sql->rowCount() > 0){
-            $dados = $sql->fetch();
-            
-            echo $dados['id'];
+
+            $sql = $sql->fetch(PDO::FETCH_OBJ);
+
+            if(password_verify($senha,$sql->senha)){
+                $_SESSION['usuario_id'] = $sql->id;
+                $_SESSION['usuario_nome'] = $sql->nome;
+                $_SESSION['usuario_logado'] = true;
+                header("Location: /home");
+
+                return true;
+            }else{
+                $this->defineMensagem("danger","A senha digitada não bate com a cadastrada");
+                header("Location: /login");
+            }
+       
         }
+
+        return false;
     }
     public function DadosUsuario(){
 
@@ -87,4 +98,14 @@ class Usuario
             echo "</pre>";
         }
     }
+
+    public function usuarioExiste($email){
+        $sql  = $this->con->query( "SELECT * FROM usuarios WHERE email = '$email'");
+
+        if($sql->rowCount() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }   
 }

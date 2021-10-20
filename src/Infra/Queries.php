@@ -15,12 +15,16 @@ class Queries
         $campos = array_pad([],count($dados),'?');
         $con = $this->con->prepare('INSERT INTO usuarios'. '('.implode(',',$dados).') VALUES ('.implode(',',$campos).')');
         $con->execute(array_values($values));
+
+        return $this->con->lastInsertId();
     }
 
-    public function select($values){
-        $sql = "SELECT nome,email FROM usuarios WHERE email = :email and senha = :senha";
+    public function select($email,$senha){
+        $sql = "SELECT email,senha FROM usuarios WHERE email = :email and senha = :senha";
         $sql = $this->con->prepare($sql);
-        $sql->execute(array_values($values));
+        $sql->bindValue(":email",$email);
+        $sql->bindValue(":senha",$senha);
+        $sql->execute();
 
         if($sql->rowCount() > 0){
             $dados = $sql->fetch();
@@ -30,8 +34,6 @@ class Queries
     }
 
     public function selectAll(){
-        $sql = $this->con->query("SELECT * FROM usuarios");
-        
-        return $sql->fetchAll(PDO::FETCH_OBJ);
+      return $this->con->query("SELECT * FROM usuarios")->fetchAll(PDO::FETCH_OBJ);
     }
 }
