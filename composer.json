@@ -13,8 +13,13 @@
         }
     ],
     "require": {
-        "doctrine/orm": "^2.6.2",
-        "symfony/yaml": "2.*",
-        "symfony/cache": "^5.3"
+        "php-tmdb/api": "^4",
+        "symfony/event-dispatcher": "^5.3",
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/cache": "^5.3",
+        "monolog/monolog": "^2.3",
+        "nyholm/psr7": "^1.4",
+        "wtfzdotnet/php-tmdb-api": "^4.0",
+        "statickidz/php-google-translate-free": "^1.2"
     }
 }

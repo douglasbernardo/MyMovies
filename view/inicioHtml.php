@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="assets/estilos/owl/owl.carousel.min.css">
         <link rel="stylesheet" type="text/css" href="assets/estilos/owl/owl.theme.default.min.css">
         <link rel="stylesheet" type="text/css" href="assets/estilos/responsive.css">
+        <link name="viewport" content="width=device-width">
     </head>
     <body style="background-color: black;">
         <nav class="navbar navbar-dark bg-dark">
@@ -18,7 +19,7 @@
                 <li class="nav-item active">
                 <?php echo "<strong>".ucwords($_SESSION['usuario_nome'])."</strong>" ?>
                     <a href="/logout">
-                    <i class="fas fa-sign-out-alt" style="font-size: 30px;"></i>
+                        <i class="fas fa-sign-out-alt" style="font-size: 30px;"></i>
                     </a>
                 </li>
             </ul>

@@ -9,13 +9,15 @@ use PDO;
 
 class Usuario
 {
+
+    use Conexao;
+    use FlashMessages;
+    
     private $id;
     private $nome;
     private $email;
     private $senha;
 
-    use Conexao;
-    use FlashMessages;
 
     public function getId(){
         $this->id;

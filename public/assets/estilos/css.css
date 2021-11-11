@@ -2,6 +2,7 @@
 :root{ /* variavel no css*/
     --vermelho:#E50914;
     --preto:#141414;
+    --branco: #FFFF;
 }
 *{
     margin:0;
@@ -11,7 +12,7 @@
 /*elementos base*/
 body{
     background-color: var(--preto);
-    color: white;
+    color: var(--branco);
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -27,8 +28,17 @@ body{
 }
 
 #titleH1{
-    color: #E50914;
+    color: var(--vermelho);
     font-weight: 900;
     font-language-override: initial;
     font-family:Impact, fantasy;
+}
+
+#ContainerFilmeSeries{
+    width: 70%;
+    height: auto;
+    margin-top:20px;
+    display: flexbox;
+    justify-content: center;
+    border-radius: 30px;
 }

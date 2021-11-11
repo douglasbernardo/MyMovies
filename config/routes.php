@@ -4,6 +4,7 @@
 use DouglasBernardo\MyMovies\Controller\{
     Formularios,
     Home,
+    Inserir,
     Logout,
     realizaCadastro,
     realizaLogin,
@@ -16,5 +17,6 @@ return [
     '/cadastro' => Formularios::class,
     '/realizaCadastro' => realizaCadastro::class,
     '/realizaLogin' => realizaLogin::class,
-    '/logout' => Logout::class
+    '/logout' => Logout::class,
+    '/inserir' => Inserir::class
 ];
