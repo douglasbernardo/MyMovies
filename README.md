@@ -1,4 +1,4 @@
 # MyMovies
 
 
-Usando a api do Omdb para buscar imagem mais facilmente: http://www.omdbapi.com/
+Usando a api do Omdb para buscar imagem sem o usuario precisar pegar do seu computador: http://www.omdbapi.com/
