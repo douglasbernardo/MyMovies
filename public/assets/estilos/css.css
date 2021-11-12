@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "compass/css3";
+
 :root{ /* variavel no css*/
     --vermelho:#E50914;
     --preto:#141414;
@@ -32,13 +34,4 @@ body{
     font-weight: 900;
     font-language-override: initial;
     font-family:Impact, fantasy;
-}
-
-#ContainerFilmeSeries{
-    width: 70%;
-    height: auto;
-    margin-top:20px;
-    display: flexbox;
-    justify-content: center;
-    border-radius: 30px;
 }
