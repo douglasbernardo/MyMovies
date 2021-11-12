@@ -19,6 +19,9 @@ class Formularios implements Requisicao
                 echo $this->renderizaHtml('cadastro/formulario',[]);
             break;
 
+            case '/insercao':
+                echo $this->renderizaHtml('insercao/formulario',[]);
+            break;
             default:
                 echo "Erro no sistema";
         }
