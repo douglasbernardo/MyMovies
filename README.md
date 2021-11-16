@@ -1,6 +1,6 @@
 # MyMovies
 
->Criando um sistema onde o Usuario poderá adicionar suas séries e filmes favoritos que foram vistos por ele, Poderá editar e deletar. As séries que usuário adicionar poderá marcar quais temporadas e episódios já foram assistidos.
+>Criando um sistema onde o Usuario poderá adicionar suas séries e filmes favoritos vistos por ele, Poderá também editar e deletar. As séries que usuário adicionar poderá marcar quais temporadas e episódios já foram assistidos.
 
 
 
