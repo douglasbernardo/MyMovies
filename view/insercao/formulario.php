@@ -13,7 +13,7 @@
     <div class="container mt-5">
         <form action="/inserir" method="POST">
             <div class="form-group">
-                <input type="text" name="nome" class="form-control form-control-lg" id="nome" placeholder="Ex: The Flash ou Mib">
+                <input type="text" name="nome" class="form-control form-control-lg" autocomplete="off" id="nome" placeholder="Ex: Velozes e Furiosos">
             </div>
             <div class="form-group">
                 <select class="form-control form-control-lg" name="options" id="getOptions">
@@ -25,7 +25,7 @@
             <p style="color: red;">Indicamos escolher uma imagem do <a href="https://www.themoviedb.org/">TMDB</a></p>
             <div class="form-row">
                 <div class="col">
-                    <input type="file" name="imagemEscolhidaPorMim" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file" name="imagemEscolhidaPorMim" class="form-control-file" id="imagem">
                 </div>
             </div>
 

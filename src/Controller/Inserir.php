@@ -38,5 +38,25 @@ class Inserir
             return;
         }
 
+        if(strlen($opiniao) < 10 || strlen($opiniao) > 200){
+            $this->defineMensagem("danger","Opinião deve ter entre 10 e 200 caracteres");
+            header("Location: /insercao");
+            return;
+        }
+
+
+        echo "Nota Escolhida: $nota/10"; 
+        echo "<br>";
+        var_dump($nome,$opcao,$img,$opiniao,$nota);
+
+        if($opcao === "movie"){
+            echo "Inserir na tabela de filmes";
+        }
+
+        if($opcao === "series"){
+            echo "Inserir na tabela de series";
+        }
+
+
     }
 }
