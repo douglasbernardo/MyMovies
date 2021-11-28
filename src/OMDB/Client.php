@@ -2,7 +2,8 @@
 
 namespace DouglasBernardo\MyMovies\OMDB;;
 
-class Client{
+class Client
+{
 
     public $apiToken;
 

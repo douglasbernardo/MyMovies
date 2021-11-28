@@ -50,11 +50,6 @@ class Usuario
        return $this->senha = $senha;
     }
 
-    public function verifyPassword(string $senha):bool
-    {
-        return password_verify($senha,$this->senha);
-    }
-
     public function Logado(){
         if(isset($_SESSION['usuario_logado']) && !empty($_SESSION['usuario_logado'])){
             return true;
@@ -69,7 +64,6 @@ class Usuario
         $sql->execute();
 
         if($sql->rowCount() > 0){
-
             $sql = $sql->fetch(PDO::FETCH_OBJ);
 
             if(password_verify($senha,$sql->senha)){

@@ -3,7 +3,7 @@
 
     <a href="/insercao">
         <button class="btn btn-warning mt-4 mb-3 m-3">
-            Inserir um filme ou serie
+            Inserir um filme ou série
         </button>
     </a>
     <div class="carrosel-desenhos">
