@@ -11,7 +11,7 @@
     ?>
 
     <div class="container mt-5">
-        <form action="/inserir" method="POST">
+        <form action="/inserir" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="text" name="nome" class="form-control form-control-lg" autocomplete="off" id="nome" placeholder="Ex: Velozes e Furiosos">
             </div>
@@ -22,10 +22,10 @@
                     <option value="series">Série</option>
                 </select>
             </div>
-            <p style="color: red;">Indicamos escolher uma imagem do <a href="https://www.themoviedb.org/">TMDB</a></p>
+            <p style="color: red;">Indicamos escolher uma imagem do <a href="https://www.themoviedb.org/">TMDB</a> <small>*Lembrando que a imagem é opcional</small></p>
             <div class="form-row">
                 <div class="col">
-                    <input type="file" name="imagemEscolhidaPorMim" class="form-control-file" id="imagem">
+                    <input type="file" name="arquivo" class="form-control-file" id="imagem">
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
             <button type="submit" id="CadastrarButton" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
         </form>
 
-        <!--<div class="aboutLink">
+        <!--<div class="aboutLink"> 
             <details>
                 <summary id="SummaryTitle">Como o link da sua imagem é encontrado?</summary>
                 <p id="detailsP">O link da Imagem é pego na API do <strong>OMDB</strong> é trazido até o input, e ela é cadastrada no Banco de dados sem você precisar fazer o download no seu computador. Mas você também tem a opção de trocar de imagem caso você queira</p>
