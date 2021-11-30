@@ -2,6 +2,7 @@
 
 namespace DouglasBernardo\MyMovies\Controller;
 
+use DouglasBernardo\MyMovies\Entity\Imagem;
 use DouglasBernardo\MyMovies\Helper\FlashMessages;
 use DouglasBernardo\MyMovies\Helper\Template;
 
@@ -15,10 +16,12 @@ class Inserir
 
         $nome = filter_input(INPUT_POST,'nome',FILTER_SANITIZE_STRING);
         $opcao = filter_input(INPUT_POST,'options',FILTER_SANITIZE_STRING);
-        $img =  filter_input(INPUT_POST,'imagem',FILTER_SANITIZE_STRING);
         $opiniao = filter_input(INPUT_POST,'opiniao',FILTER_SANITIZE_STRING);
         $nota = filter_input(INPUT_POST,'minhaNota',FILTER_VALIDATE_FLOAT);
-        
+
+    
+        $imgem = new Imagem($_FILES['arquivo']);
+
         if($nome == "" || $opcao == "" || $opiniao == "" || $nota == ""){
             $this->defineMensagem("danger","Os dados devem ser preenchidos");
             header("Location: /insercao");
@@ -44,18 +47,20 @@ class Inserir
             return;
         }
 
+        echo "Nome do Filme: $nome", "<br>",
+            "Filme ou Serie :$opcao", "<br>",
+            $imgem->getImageName(), "<br>",
+            "Minha Opinião:$opiniao", "<br>",
+            "Minha Nota: $nota"; "<br>";
+        
 
-        echo "Nota Escolhida: $nota/10"; 
-        echo "<br>";
-        var_dump($nome,$opcao,$img,$opiniao,$nota);
+        // if($opcao === "movie"){
+        //     echo "Inserir na tabela de filmes";
+        // }
 
-        if($opcao === "movie"){
-            echo "Inserir na tabela de filmes";
-        }
-
-        if($opcao === "series"){
-            echo "Inserir na tabela de series";
-        }
+        // if($opcao === "series"){
+        //     echo "Inserir na tabela de series";
+        // }
 
 
     }
