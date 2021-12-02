@@ -23,6 +23,11 @@ class Filme
         return $this->nome;
     }
 
+    public function getImagem(): Imagem
+    {
+        return $this->img;
+    }
+
     public function getNota(): float
     {
         return $this->nota;
@@ -33,17 +38,17 @@ class Filme
         return $this->opiniao;
     }
 
-    public function getImagem(): Imagem
-    {
-        return $this->img;
-    }
-
     public function setNome(string $nomeFilme)
     {
         $this->nome = $nomeFilme;
     }
 
-    public function setNota(?float $nota)
+    public function setImagem(?Imagem $imgem)
+    {
+        $this->img = $imgem;
+    }
+
+    public function setNota(?int $nota)
     {
         return $this->nota = $nota;
     }
