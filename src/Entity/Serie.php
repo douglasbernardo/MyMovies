@@ -24,6 +24,11 @@ class Serie
         return $this->nome;
     }
 
+    public function getImagem(): Imagem
+    {
+        return $this->img;
+    }
+
     public function getTemporadas(): string
     {
         return $this->temporadas;
@@ -44,26 +49,28 @@ class Serie
         return $this->opiniao;
     }
 
-    public function getImagem(): Imagem
-    {
-        return $this->img;
-    }
 
     public function setNome(string $nome)
     {
         $this->nome = $nome;
     }
-    public function setTemporadas($temporadas)
+
+    public function setImagem(Imagem $imgem)
+    {
+        $this->img = $imgem;
+    }
+
+    public function setTemporadas(int $temporadas)
     {
         $this->temporadas = $temporadas;
     }
 
-    public function setEpisodios($episodios)
+    public function setEpisodios(int $episodios)
     {
         $this->episodios = $episodios;
     }
 
-    public function setNota($nota)
+    public function setNota(?int $nota)
     {
         $this->nota = $nota;
     }
