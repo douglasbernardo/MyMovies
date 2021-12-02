@@ -31,14 +31,14 @@
 
             <div class="SerieOption" style="display:none">
                 <div class="form-group mt-3">
-                    <input type="number" class="form-control form-control-lg" id="qtdTemporadas" placeholder="Quantidade de Temporadas">
+                    <input type="number" class="form-control form-control-lg" name="qtdTemporadas" id="qtdTemporadas" placeholder="Quantidade de Temporadas">
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control form-control-lg" id="qtdEpisodios" placeholder="Quantidade de Episodios por Temporadas">
+                    <input type="number" class="form-control form-control-lg" name="qtdEpisodios" id="qtdEpisodios" placeholder="Quantidade de Episodios por Temporadas">
                 </div>
             </div>
             <div class="form-group mt-3">
-                    <input type="number" step="0.1" max="10" class="form-control form-control-lg" name="minhaNota" id="minhaNota" placeholder="Sua nota até 10">
+                    <input type="number" step="0.0" max="10" class="form-control form-control-lg" name="minhaNota" id="minhaNota" placeholder="Sua nota até 10">
                 </div>
             <div class="form-group mt-3">
                 <textarea class="form-control form-control-lg" name="opiniao" id="opiniao" rows="3" placeholder="Sua Opinião sobre"></textarea>
