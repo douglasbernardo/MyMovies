@@ -36,4 +36,13 @@ class Imagem
         return $this->imagem->type;
     }
 
+    public function manipularImegem()
+    {
+        $permitidos = ["image/png", "image/jpeg", "image/jpg"];
+
+        if(!in_array($this->imagem->type,$permitidos)){
+            echo "Extensão não é permitida";
+        }
+
+    }
 }
