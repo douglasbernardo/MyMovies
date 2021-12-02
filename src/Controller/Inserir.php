@@ -28,8 +28,8 @@ class Inserir
     
         $imgem = new Imagem($_FILES['arquivo']);
 
-        if($nome == "" || $opcao == "" || $opiniao == "" || $nota == ""){
-            $this->defineMensagem("danger","Os dados devem ser preenchidos");
+        if(isset($nome) == "" || isset($opcao) == "" || isset($opiniao) == "" || isset($nota) == ""){
+            $this->defineMensagem("warning","Preencha todos os dados");
             header("Location: /insercao");
             return; 
         }
@@ -57,6 +57,8 @@ class Inserir
             case "movie":
                 $filme = new Filme();
                 $filme->setNome($nome);
+                $filme->setImagem($imgem);
+                echo $imgem->manipularImegem();
                 $filme->setNota($nota);
                 $filme->setOpiniao($opiniao);
     
@@ -67,6 +69,8 @@ class Inserir
             case "series":
                 $serie = new Serie();
                 $serie->setNome($nome);
+                $serie->setImagem($imgem);
+                $imgem->manipularImegem();
                 $serie->setTemporadas($qtdTemporadas);
                 $serie->setEpisodios($qtdEpisodios);
                 $serie->setNota($nota);
