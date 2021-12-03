@@ -36,11 +36,24 @@ class Imagem
         return $this->imagem->type;
     }
 
-    public function manipularImegem()
+    public function manipularImagem(): string
     {
+
+        if(isset($this->imagem) && empty($this->imagem->type)){
+            echo "Imagem Inexistente";
+            return false;
+        }
+    
         $permitidos = ["image/png", "image/jpeg", "image/jpg"];
-        
+            
         echo !in_array($this->imagem->type,$permitidos) ? "Extensão não permitida" : "";
+
+        if(!in_array($this->imagem->type,$permitidos)){
+            echo "Extensão não permitida";
+        }
+        $nomeHash = md5(time().rand(0,999)).'.jpg';
+
+        return $nomeHash;
 
     }
 }
