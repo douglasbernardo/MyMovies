@@ -58,7 +58,7 @@ class Inserir
                 $filme = new Filme();
                 $filme->setNome($nome);
                 $filme->setImagem($imgem);
-                echo $imgem->manipularImegem();
+                echo $imgem->manipularImagem();
                 $filme->setNota($nota);
                 $filme->setOpiniao($opiniao);
     
@@ -70,13 +70,15 @@ class Inserir
                 $serie = new Serie();
                 $serie->setNome($nome);
                 $serie->setImagem($imgem);
-                $imgem->manipularImegem();
+                $imgem->manipularImagem();
                 $serie->setTemporadas($qtdTemporadas);
                 $serie->setEpisodios($qtdEpisodios);
                 $serie->setNota($nota);
                 $serie->setOpiniao($opiniao);
 
                 echo "<pre>";var_dump($serie); echo "</pre>";
+
+                echo $imgem->manipularImagem();
 
                 break;
 
