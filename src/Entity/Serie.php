@@ -24,7 +24,7 @@ class Serie
         return $this->nome;
     }
 
-    public function getImagem(): Imagem
+    public function getImagem():Imagem
     {
         return $this->img;
     }
@@ -55,7 +55,7 @@ class Serie
         $this->nome = $nome;
     }
 
-    public function setImagem(Imagem $imgem)
+    public function setImagem($imgem)
     {
         $this->img = $imgem;
     }
