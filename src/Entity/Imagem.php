@@ -50,7 +50,7 @@ class Imagem
 
         $nomeHash = md5(time().rand(0,999)).'.jpg';
 
-        move_uploaded_file($this->imagem->tmp_name,'assets/images/'.$nomeHash);
+        move_uploaded_file($this->imagem->tmp_name,'assets/images/uploads/'.$nomeHash);
 
         return $nomeHash;
 
