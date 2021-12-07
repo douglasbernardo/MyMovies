@@ -63,22 +63,14 @@ class Inserir implements Requisicao
             case "movie":
                 $filme = new Filme();
 
-                //echo "<pre>";var_dump($values);
-
-                //echo "<img src='/assets/images/{$values['imagem']}'>";
-
-                $idUser = $_SESSION['usuario_id'];
-
                 $this->db->insertMovie(
                     $filme->setNome($nome),
-                    $imgem->getImageName(),
+                    $imgem->HashImage(),
                     $filme->setNota($nota),
                     $filme->setOpiniao($opiniao),
-                    $idUser
                 );
 
                 header('location:/home');
-
 
                 break;
             
