@@ -24,6 +24,7 @@ class Home implements Requisicao
     public function handle(): void
     {
         $filmes = $this->db->selectAllFromMovies();
+        
         echo $this->renderizaHtml('home',[
             "filmes" => $filmes
         ]);
