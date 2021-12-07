@@ -5,7 +5,7 @@ namespace DouglasBernardo\MyMovies\Controller;
 
 use DouglasBernardo\MyMovies\Entity\Usuario;
 use DouglasBernardo\MyMovies\Helper\FlashMessages;
-use DouglasBernardo\MyMovies\Infra\Queries;
+use DouglasBernardo\MyMovies\Infra\QueriesUsers;
 
 class realizaCadastro implements Requisicao
 {
@@ -14,7 +14,7 @@ class realizaCadastro implements Requisicao
 
     public function __construct()
     {
-        $this->db = new Queries();   
+        $this->db = new QueriesUsers();   
     }
 
     public function handle(): void

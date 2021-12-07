@@ -4,7 +4,7 @@ namespace DouglasBernardo\MyMovies\Entity;
 
 use DouglasBernardo\MyMovies\Helper\Conexao;
 use DouglasBernardo\MyMovies\Helper\FlashMessages;
-use DouglasBernardo\MyMovies\Infra\Queries;
+use DouglasBernardo\MyMovies\Infra\QueriesUsers;
 use PDO;
 
 class Usuario
@@ -84,7 +84,7 @@ class Usuario
     }
     public function DadosUsuario(){
 
-        foreach((new Queries())->selectAll() as $users){
+        foreach((new QueriesUsers())->selectAll() as $users){
             echo "<pre>";
                 var_dump(
                     $users->nome,

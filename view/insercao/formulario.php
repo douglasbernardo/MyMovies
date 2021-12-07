@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="form-group mt-3">
-                    <input type="number" step="0.0" max="10" class="form-control form-control-lg" name="minhaNota" id="minhaNota" placeholder="Sua nota até 10">
+                    <input type="number" step="0.1" max="10" class="form-control form-control-lg" name="minhaNota" id="minhaNota" placeholder="Sua nota até 10">
                 </div>
             <div class="form-group mt-3">
                 <textarea class="form-control form-control-lg" name="opiniao" id="opiniao" rows="3" placeholder="Sua Opinião sobre"></textarea>

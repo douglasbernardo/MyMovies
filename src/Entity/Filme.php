@@ -40,12 +40,12 @@ class Filme
 
     public function setNome(string $nomeFilme)
     {
-        $this->nome = $nomeFilme;
+       return $this->nome = $nomeFilme;
     }
 
     public function setImagem(?Imagem $imgem)
     {
-        $this->img = $imgem;
+        return $this->img = $imgem;
     }
 
     public function setNota(?int $nota)
@@ -55,6 +55,6 @@ class Filme
     
     public function setOpiniao(string $opiniao)
     {
-        $this->opiniao = $opiniao;
+        return $this->opiniao = $opiniao;
     }
 }

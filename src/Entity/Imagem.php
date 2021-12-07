@@ -36,7 +36,7 @@ class Imagem
         return $this->imagem->type;
     }
 
-    public function manipularImagem(): string
+    public function HashImage(): string
     {
 
         if(isset($this->imagem) && empty($this->imagem->type)){
@@ -48,10 +48,9 @@ class Imagem
             
         echo !in_array($this->imagem->type,$permitidos) ? "Extensão não permitida" : "";
 
-        if(!in_array($this->imagem->type,$permitidos)){
-            echo "Extensão não permitida";
-        }
         $nomeHash = md5(time().rand(0,999)).'.jpg';
+
+        move_uploaded_file($this->imagem->tmp_name,'assets/images/'.$nomeHash);
 
         return $nomeHash;
 

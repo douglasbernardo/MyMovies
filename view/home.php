@@ -7,15 +7,11 @@
         </button>
     </a>
     <div class="carrosel-desenhos">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img class="box-desenho w-75" src="assets/images/arrow.jpg" alt="Desenho Bob Esponja"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/theflash.jpg" alt="Desenho O Mundo de Gumball"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/b99.jpg" alt="Os Jovens Titans em Ação"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/pb.jpg" alt="Phineas E Ferb"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/elite.jpeg" alt="Phineas E Ferb"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/sense8.jpg" alt="Phineas E Ferb"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/gotham.jpg" alt="Phineas E Ferb"></div>
-        </div>
+            <div class="owl-carousel owl-theme">
+            <?php foreach($filmes as $filme):?>
+                <div class="item"><img class="box-desenho w-75" src="assets/images/<?php echo $filme->imagem ?>" alt="<?php echo $filme->nome ?>"></div>
+            <?php endforeach ?>
+            </div>
     </div>
     <div class="carrosel-desenhos">
         <div class="owl-carousel owl-theme">

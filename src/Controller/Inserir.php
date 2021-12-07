@@ -2,18 +2,24 @@
 
 namespace DouglasBernardo\MyMovies\Controller;
 
-use DouglasBernardo\MyMovies\Entity\Filme;
-use DouglasBernardo\MyMovies\Entity\Imagem;
-use DouglasBernardo\MyMovies\Entity\Serie;
-use DouglasBernardo\MyMovies\Helper\FlashMessages;
-use DouglasBernardo\MyMovies\Helper\Template;
+use DouglasBernardo\MyMovies\Entity\{Filme,Imagem,Serie};
+use DouglasBernardo\MyMovies\Helper\{FlashMessages,Template};
+use DouglasBernardo\MyMovies\Infra\QuerieMovies;
+use DouglasBernardo\MyMovies\Infra\QueriesMovies;
 use Error;
 use Exception;
 
-class Inserir
+class Inserir implements Requisicao
 {
     use FlashMessages;
     use Template;
+
+
+    public function __construct()
+    {
+        $this->db = new QueriesMovies();   
+
+    }
 
     public function handle(): void
     {   
@@ -56,21 +62,31 @@ class Inserir
         switch($opcao){
             case "movie":
                 $filme = new Filme();
-                $filme->setNome($nome);
-                $filme->setImagem($imgem);
-                echo $imgem->manipularImagem();
-                $filme->setNota($nota);
-                $filme->setOpiniao($opiniao);
-    
-                echo "<pre>";var_dump($filme); echo "</pre>";
-                
+
+                //echo "<pre>";var_dump($values);
+
+                //echo "<img src='/assets/images/{$values['imagem']}'>";
+
+                $idUser = $_SESSION['usuario_id'];
+
+                $this->db->insertMovie(
+                    $filme->setNome($nome),
+                    $imgem->getImageName(),
+                    $filme->setNota($nota),
+                    $filme->setOpiniao($opiniao),
+                    $idUser
+                );
+
+                header('location:/home');
+
+
                 break;
             
             case "series":
                 $serie = new Serie();
                 $serie->setNome($nome);
                 $serie->setImagem($imgem);
-                $imgem->manipularImagem();
+                $imgem->HashImage();
                 $serie->setTemporadas($qtdTemporadas);
                 $serie->setEpisodios($qtdEpisodios);
                 $serie->setNota($nota);
@@ -78,7 +94,7 @@ class Inserir
 
                 echo "<pre>";var_dump($serie); echo "</pre>";
 
-                echo $imgem->manipularImagem();
+                echo $imgem->HashImage();
 
                 break;
 
