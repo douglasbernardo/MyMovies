@@ -7,11 +7,11 @@
         </button>
     </a>
     <div class="carrosel-desenhos">
-            <div class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-theme">
             <?php foreach($filmes as $filme):?>
-                <div class="item"><img class="box-desenho w-75" src="assets/images/<?php echo $filme->imagem ?>" alt="<?php echo $filme->nome ?>"></div>
+                <div class="item"><img class="box-desenho w-75" src="assets/images/uploads/<?php echo $filme->imagem ?>" alt="<?php echo $filme->nome ?>"></div>
             <?php endforeach ?>
-            </div>
+        </div>
     </div>
     <div class="carrosel-desenhos">
         <div class="owl-carousel owl-theme">
