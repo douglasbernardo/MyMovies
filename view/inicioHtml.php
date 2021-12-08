@@ -17,7 +17,7 @@
             <?php if (isset($_SESSION['usuario_logado'])) :?>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                <?php echo "<strong>".ucwords($_SESSION['usuario_nome'])."</strong>" ?>
+                <?php echo "<strong>".(ucwords($_SESSION['usuario_nome']))."</strong>" ?>
                     <a href="/logout">
                         <i class="fas fa-sign-out-alt" style="font-size: 30px;"></i>
                     </a>
