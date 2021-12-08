@@ -6,23 +6,24 @@
             Inserir um filme ou série
         </button>
     </a>
-    <div class="carrosel-desenhos">
+    <?php foreach($filmes as $filme):?>
+    <div class="card" style="width: 18rem;">
+            <img src="assets/images/uploads/<?= $filme->imagem ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    <?php endforeach ?>
+    <!-- <div class="carrosel-desenhos">
         <div class="owl-carousel owl-theme">
             <?php foreach($filmes as $filme):?>
                 <div class="item">
-                    <img class="box-desenho w-75" src="assets/images/uploads/<?php echo $filme->imagem ?>" alt="<?php echo $filme->nome ?>">
+                    <img class="box-desenho w-75" src="assets/images/uploads/<?= $filme->imagem ?>" alt="<?php echo $filme->nome ?>">
                 </div>
             <?php endforeach ?>
         </div>
-    </div>
-    <!-- <div class="carrosel-desenhos">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img class="box-desenho w-75" src="assets/images/round6.jpg" alt="Round6"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/st.jpeg" alt="Stranger Things"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/riverdale.jpg" alt="Os Flintstones"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/la.jpg" alt="Johny O Bravo"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/sexEducation.jpg" alt="Turma Do Pateta"></div>
-            <div class="item"><img class="box-desenho w-75" src="assets/images/sabrina.jpg" alt="Meninas Super Poderosas"></div> 
-        </div>
     </div> -->
+
 <?php require_once __DIR__ . './finalHtml.php' ?>
