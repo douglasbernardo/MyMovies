@@ -8,7 +8,7 @@
     </a>
     <div class="card-images">
         <?php foreach($filmes as $filme):?>
-        <div class="card" style="border-radius: 15%;">
+        <div class="card" style="border-radius: 15%; border:black;">
             <img src="assets/images/uploads/<?= $filme->imagem ?>" style="border-radius: 15%;" class="card-img-top" alt="...">
             <!-- <div class="card-body">
                 <h5 class="card-title">Card title</h5>

@@ -58,8 +58,9 @@ body{
 .card{
     display: flex;
     margin: 10px;
-    width: 170px;
+    width: 190px;
     border-radius: 15%;
+    border: #141414;
 }
 
 .card-images{
@@ -67,4 +68,5 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 15%;
+    border: #141414;
 }
