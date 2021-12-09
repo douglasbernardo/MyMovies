@@ -23,7 +23,7 @@ class Home implements Requisicao
 
     public function handle(): void
     {
-        $filmes = $this->db->selectAllFromMovies();
+        $filmes = $this->db->selectAllFromMovies(15);
         
         echo $this->renderizaHtml('home',[
             "filmes" => $filmes
