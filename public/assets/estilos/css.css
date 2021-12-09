@@ -54,3 +54,17 @@ body{
     color: black;
 }
 */
+
+.card{
+    display: flex;
+    margin: 10px;
+    width: 170px;
+    border-radius: 15%;
+}
+
+.card-images{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 15%;
+}
