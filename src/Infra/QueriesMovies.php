@@ -25,8 +25,9 @@ class QueriesMovies
     //     return $this->con->lastInsertId();
     // }
 
-    public function selectAllFromMovies($limit){
-      return $this->con->query("SELECT * FROM filmes WHERE id_usuario =". $_SESSION['usuario_id']." LIMIT $limit")->fetchAll(PDO::FETCH_OBJ);
+    public function selectAllFromMovies()
+    {
+      return $this->con->query("SELECT * FROM filmes WHERE id_usuario =". $_SESSION['usuario_id'])->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function selectAllSeries()
