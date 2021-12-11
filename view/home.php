@@ -1,4 +1,8 @@
-<?php require_once __DIR__ . './inicioHtml.php' ?>
+<?php
+
+use Gumlet\ImageResize;
+
+require_once __DIR__ . './inicioHtml.php' ?>
 
 
     <a href="/insercao">
@@ -6,15 +10,12 @@
             Inserir um filme ou série
         </button>
     </a>
-    <div class="card-images">
+    <div class="images-container">
         <?php foreach($filmes as $filme):?>
-        <div class="card" style="border-radius: 15%; border:black;">
-            <img src="assets/images/uploads/<?= $filme->imagem ?>" style="border-radius: 15%;" class="card-img-top" alt="...">
-            <!-- <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div> -->
+        <div class="filmes">
+            <a href="#">
+                <img src="assets/images/uploads/<?= $filme->imagem ?>" class="card-img-top" alt="<?= $filme->nome ?>">
+            </a>
         </div>
         <?php endforeach ?>
     </div>
