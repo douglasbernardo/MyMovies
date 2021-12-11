@@ -5,6 +5,8 @@ namespace DouglasBernardo\MyMovies\Controller;
 use DouglasBernardo\MyMovies\Entity\Usuario;
 use DouglasBernardo\MyMovies\Helper\Template;
 use DouglasBernardo\MyMovies\Infra\QueriesMovies;
+use Gumlet\ImageResize;
+use Tmdb\Model\Image;
 
 class Home implements Requisicao
 {
@@ -23,7 +25,7 @@ class Home implements Requisicao
 
     public function handle(): void
     {
-        $filmes = $this->db->selectAllFromMovies(15);
+        $filmes = $this->db->selectAllFromMovies();
         
         echo $this->renderizaHtml('home',[
             "filmes" => $filmes

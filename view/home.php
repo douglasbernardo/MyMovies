@@ -14,7 +14,10 @@ require_once __DIR__ . './inicioHtml.php' ?>
         <?php foreach($filmes as $filme):?>
         <div class="filmes">
             <a href="#">
-                <img src="assets/images/uploads/<?= $filme->imagem ?>" class="card-img-top" alt="<?= $filme->nome ?>">
+                <?php 
+                    echo $filme->imagem == "" ? "<img class='card-img-top' src='assets/images/noImage.png'>" : 
+                        "<img class='card-img-top' src='assets/images/uploads/$filme->imagem' alt='$filme->nome'>";
+                ?>
             </a>
         </div>
         <?php endforeach ?>

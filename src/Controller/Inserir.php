@@ -6,8 +6,7 @@ use DouglasBernardo\MyMovies\Entity\{Filme,Imagem,Serie};
 use DouglasBernardo\MyMovies\Helper\{FlashMessages,Template};
 use DouglasBernardo\MyMovies\Infra\QuerieMovies;
 use DouglasBernardo\MyMovies\Infra\QueriesMovies;
-use Error;
-use Exception;
+use Gumlet\ImageResize;
 
 class Inserir implements Requisicao
 {
