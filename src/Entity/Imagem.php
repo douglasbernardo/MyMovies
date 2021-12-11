@@ -2,6 +2,8 @@
 
 namespace DouglasBernardo\MyMovies\Entity;
 
+use Gumlet\ImageResize;
+
 class Imagem
 {
 
@@ -36,6 +38,13 @@ class Imagem
         return $this->imagem->type;
     }
 
+
+    public function definirTamanho($img)
+    {
+        $image = new ImageResize($img);
+        $image->resize(2000, 3000);
+    }
+
     public function HashImage(): string
     {
 
@@ -43,6 +52,8 @@ class Imagem
             echo "Imagem Inexistente";
             return false;
         }
+
+        //Diminuir tamanho da imagem para o tamanho 2000X3000
     
         $permitidos = ["image/png", "image/jpeg", "image/jpg"];
             
