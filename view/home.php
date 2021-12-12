@@ -13,8 +13,9 @@ require_once __DIR__ . './inicioHtml.php' ?>
         <div class="filmes">
             <a href="#">
                 <?php 
-                    echo $filme->imagem == "" ? "<img class='card-img-top' src='assets/images/noImage.png'>" : 
-                        "<img class='card-img-top' src='assets/images/uploads/$filme->imagem' alt='$filme->nome'>";
+                    echo $filme->imagem == "" ? 
+                        "<a href='/show?id=$filme->id'><img class='card-img-top' src='assets/images/noImage.png' alt='$filme->nome'></a>" : 
+                        "<a href='/show?id=$filme->id'><img class='card-img-top' src='assets/images/uploads/$filme->imagem' alt='$filme->nome'></a>";
                 ?>
             </a>
         </div>
