@@ -2,12 +2,16 @@
 
 >Criando um sistema onde o Usuario poderá adicionar suas séries e filmes favoritos vistos por ele, Poderá também editar e deletar. As séries que usuário adicionar poderá marcar quais temporadas e episódios já foram assistidos.
 
-#Tecnologias Sendo Usadas:
-.PHP 
-.JAVASCRIPT
-.HTML E CSS
-.COMPOSER
-.BOOTSTRAP
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [HTML](https://expo.io/)
+- [CSS](https://nodejs.org/en/)
+- [BOOTSTRAP](https://pt-br.reactjs.org/)
+- [PHP](https://reactnative.dev/)
+- [COMPOSER](https://www.typescriptlang.org/)
+- [JAVASCRIPT](https://www.typescriptlang.org/)
 
 
 Usando a api do Omdb para buscar imagem sem o usuario precisar pegar do seu computador: http://www.omdbapi.com/
