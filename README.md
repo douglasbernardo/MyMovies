@@ -6,12 +6,12 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [HTML](https://expo.io/)
-- [CSS](https://nodejs.org/en/)
-- [BOOTSTRAP](https://pt-br.reactjs.org/)
-- [PHP](https://reactnative.dev/)
-- [COMPOSER](https://www.typescriptlang.org/)
-- [JAVASCRIPT](https://www.typescriptlang.org/)
+- [HTML](https://html/)
+- [CSS](https://css/)
+- [BOOTSTRAP](https://bootstrap/)
+- [PHP](https://php.org/)
+- [COMPOSER](https://getcomposer.org/)
+- [JAVASCRIPT](https://www.javascript.org/)
 
 
 Usando a api do Omdb para buscar imagem sem o usuario precisar pegar do seu computador: http://www.omdbapi.com/
