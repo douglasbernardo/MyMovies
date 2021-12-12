@@ -1,4 +1,4 @@
-<h1 align="center">Nome do Projeto</h1>
+<h1 align="center">MyMovies</h1>
 
 >Criando um sistema onde o Usuario poderá adicionar suas séries e filmes favoritos vistos por ele, Poderá também editar e deletar. As séries que usuário adicionar poderá marcar quais temporadas e episódios já foram assistidos.
 
