@@ -14,12 +14,17 @@
             <?php if (isset($_SESSION['usuario_logado'])) :?>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                <?php echo "<strong>".(ucwords($_SESSION['usuario_nome']))."</strong>" ?>
-                    <a href="/logout">
-                        <i class="fas fa-sign-out-alt" style="font-size: 30px;"></i>
-                    </a>
+                    <?php echo "<strong>".(ucwords($_SESSION['usuario_nome']))."</strong>" ?>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-cog" style="font-size:20px;"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="/logout">Sair</a></li>
+                            <li><a class="dropdown-item" href="/excluir-conta">Excluir Conta</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-            
             <?php endif ?>
         </nav>

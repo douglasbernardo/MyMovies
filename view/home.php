@@ -1,7 +1,5 @@
 <?php
 
-use Gumlet\ImageResize;
-
 require_once __DIR__ . './inicioHtml.php' ?>
 
 
