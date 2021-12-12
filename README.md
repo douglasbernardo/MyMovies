@@ -6,8 +6,8 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [HTML] (https://www.javascript.com/)
-- [CSS] (https://www.javascript.com/)
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/)
 - [BOOTSTRAP](https://bootstrap/)
 - [PHP](https://php.org/)
 - [COMPOSER](https://getcomposer.org/)
