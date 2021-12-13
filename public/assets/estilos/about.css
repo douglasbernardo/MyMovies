@@ -1,0 +1,16 @@
+
+
+.container{
+    display: flex;
+    justify-content: start;
+}
+
+.container img{
+    width: 600px;
+    height: 900px;
+}
+
+.things{
+    display: flex;
+    justify-content: end;
+}
