@@ -4,7 +4,6 @@ namespace DouglasBernardo\MyMovies\Infra;
 
 use DouglasBernardo\MyMovies\Helper\Conexao;
 use PDO;
-use PDOException;
 
 class QueriesUsers
 {
@@ -35,5 +34,15 @@ class QueriesUsers
 
     public function selectAll(){
       return $this->con->query("SELECT * FROM usuarios")->fetchAll(PDO::FETCH_OBJ);
+    }
+
+
+    public function deleteUserAccount($id)
+    {
+        return $this->con->query("DELETE FROM usuarios WHERE id = $id");
+    }
+    public function deleteUserMovieAccount($id)
+    {
+        return $this->con->query("DELETE FROM filmes WHERE filmes.id = $id");
     }
 }
