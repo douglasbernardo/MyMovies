@@ -46,16 +46,16 @@ class realizaCadastro implements Requisicao
             return;
         }
 
-        $usuarios = new Usuario();
+        $usuario = new Usuario();
 
         $values = [
-            "nome" => $usuarios->setNome($nome),
-            "email"=>  $usuarios->setEmail($email),
-            "senha"=> password_hash($usuarios->setSenha($senha),PASSWORD_DEFAULT)
+            "nome" => $usuario->setNome($nome),
+            "email"=>  $usuario->setEmail($email),
+            "senha"=> password_hash($usuario->setSenha($senha),PASSWORD_DEFAULT)
         ];
 
         
-        if($usuarios->usuarioExiste($email)){
+        if($usuario->usuarioExiste($email)){
             $this->defineMensagem("danger","E-mail já existente");
             header("Location: /cadastro");
             return;
@@ -66,6 +66,6 @@ class realizaCadastro implements Requisicao
         $_SESSION['usuario_email'] = $values["email"];
         $_SESSION['usuario_logado'] = true;
 
-        header("Location: /home");
+        header("Location: /login");
     }
 }
