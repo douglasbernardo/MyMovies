@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Series E Filmes</title>
         <link rel="stylesheet" type="text/css" href="assets/estilos/css.css">
+        <link rel="stylesheet" type="text/css" href="assets/estilos/about.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link name="viewport" content="width=device-width">
@@ -21,7 +22,7 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/logout">Sair</a></li>
-                            <li><a class="dropdown-item" href="/excluir-conta">Excluir Conta</a></li>
+                            <li><a class="dropdown-item" href="/deletar-conta">Excluir Conta</a></li>
                         </ul>
                     </div>
                 </li>
