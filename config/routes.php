@@ -2,6 +2,7 @@
 // aqui ficara as rotas
 
 use DouglasBernardo\MyMovies\Controller\{
+    DeleteAccount,
     Formularios,
     Home,
     Insercao,
@@ -9,6 +10,7 @@ use DouglasBernardo\MyMovies\Controller\{
     Logout,
     realizaCadastro,
     realizaLogin,
+    Show,
 };
 
 return [
@@ -20,5 +22,7 @@ return [
     '/realizaLogin' => realizaLogin::class,
     '/logout' => Logout::class,
     '/inserir' => Inserir::class,
-    '/insercao' => Formularios::class
+    '/insercao' => Formularios::class,
+    '/deletar-conta' => DeleteAccount::class,
+    '/show' => Show::class
 ];
