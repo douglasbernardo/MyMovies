@@ -20,7 +20,7 @@ class Show implements Requisicao
     {
         $filme = $this->db->selectOneMovie($_GET['id']);
 
-        echo $this->renderizaHtml("show/about",[
+        echo $this->renderizaHtml("show/aboutMovie",[
             "filme" => $filme
         ]);
     }
