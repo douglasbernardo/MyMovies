@@ -1,6 +1,6 @@
 <h1 align="center">MyMovies</h1>
 
->Criando um sistema onde o Usuario poderá adicionar suas séries e filmes favoritos vistos por ele, Poderá também editar e deletar. As séries que usuário adicionar poderá marcar quais temporadas e episódios já foram assistidos.
+>Criando um sistema onde o Usuario pode adicionar suas séries e filmes favoritos vistos por ele ou que ele queira ver, Poderá também editar e deletar. As séries que usuário adicionar poderá marcar quais temporadas e episódios já foram assistidos.
 
 ### 🛠 Tecnologias
 
