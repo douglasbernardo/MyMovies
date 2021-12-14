@@ -1,16 +1,25 @@
 
-
-.container{
+.containerDetails{
     display: flex;
     justify-content: start;
 }
 
-.container img{
+.container .imagem{
     width: 600px;
     height: 900px;
+    display: inline-block;
 }
 
-.things{
+h4{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    color: aliceblue;
+    margin-top: 40px;
+    position: relative;
+}
+
+.containerDetails div{
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    margin: 40px;
 }
