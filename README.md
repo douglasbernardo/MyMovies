@@ -13,6 +13,3 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [COMPOSER](https://getcomposer.org/)
 - [JAVASCRIPT](https://www.javascript.com/)
 - [JQUERY.Ajax](https://api.jquery.com/jquery.ajax/)
-
-
-Usando a api do Omdb para buscar imagem sem o usuario precisar pegar do seu computador: http://www.omdbapi.com/
