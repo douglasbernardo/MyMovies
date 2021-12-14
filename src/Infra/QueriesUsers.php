@@ -43,6 +43,6 @@ class QueriesUsers
     }
     public function deleteUserMovieAccount($id)
     {
-        return $this->con->query("DELETE FROM filmes WHERE filmes.id = $id");
+        return $this->con->query("DELETE FROM filmes WHERE filmes.id_usuario = $id");
     }
 }
