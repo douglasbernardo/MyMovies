@@ -7,7 +7,7 @@
         <div>
             <ul>
                 <h4>Nome do Filme: <?= $filmes->nome ?></h4>
-                <h4>Nota: <?= $filmes->nota ?></h4>
+                <h4>Minha Nota: <?= $filmes->nota;  ?>/10 <?php for($i=0;$i<$filmes->nota;$i++){echo "<i style='color:yellow' class='fas fa-star'></i>";} ?></h4>
                 <h4>Minha Opinião: <?= $filmes->opiniao ?></h4>
             </ul>
         </div>
