@@ -1,5 +1,5 @@
 
-document.getElementById('getOptions').addEventListener('change', function(){
+document.getElementById('getOptions').addEventListener('change', () =>{
     //console.log(this.value); // o valor que procuras é: this.value
     let container = document.querySelector(".SerieOption")
 

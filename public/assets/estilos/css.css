@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import "compass/css3";
 
 :root{ /* variavel no css*/
     --vermelho:#E50914;
     --preto:#141414;
-    --branco: #FFFF;
+    --branco: rgb(204, 137, 137);
 }
 *{
     margin:0;

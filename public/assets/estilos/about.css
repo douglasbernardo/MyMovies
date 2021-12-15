@@ -27,4 +27,13 @@ h4{
 
 #stars{
     color: yellow;
+    font-size:20px;
+}
+
+.containerDetails .buttons{
+    display: inline;
+    font-size: 30px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
 }

@@ -46,13 +46,6 @@
 
             <button type="submit" id="CadastrarButton" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
         </form>
-
-        <!--<div class="aboutLink"> 
-            <details>
-                <summary id="SummaryTitle">Como o link da sua imagem é encontrado?</summary>
-                <p id="detailsP">O link da Imagem é pego na API do <strong>OMDB</strong> é trazido até o input, e ela é cadastrada no Banco de dados sem você precisar fazer o download no seu computador. Mas você também tem a opção de trocar de imagem caso você queira</p>
-            </details>
-        </div>-->
     </div>
 
       

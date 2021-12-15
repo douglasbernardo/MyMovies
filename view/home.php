@@ -1,6 +1,4 @@
-<?php
-
-require_once __DIR__ . './inicioHtml.php' ?>
+<?php require_once __DIR__ . './inicioHtml.php' ?>
 
 
     <a href="/insercao">

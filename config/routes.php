@@ -3,6 +3,7 @@
 
 use DouglasBernardo\MyMovies\Controller\{
     DeleteAccount,
+    DeleteMovie,
     Formularios,
     Home,
     Insercao,
@@ -24,5 +25,6 @@ return [
     '/inserir' => Inserir::class,
     '/insercao' => Formularios::class,
     '/deletar-conta' => DeleteAccount::class,
-    '/show' => Show::class
+    '/show' => Show::class,
+    '/excluir' => DeleteMovie::class
 ];

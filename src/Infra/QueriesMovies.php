@@ -40,8 +40,9 @@ class QueriesMovies
         return $this->con->query("SELECT * FROM series")->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function deleteMovieUser($id)
+    public function deleteMovie($id)
     {
-        return $this->con->query("DELETE FROM filmes WHERE filmes.id_usuario = $id");
+        return $this->con->query("DELETE FROM filmes WHERE id = $id");
     }
+
 }
