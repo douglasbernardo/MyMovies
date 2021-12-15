@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .containerDetails{
     display: flex;
@@ -11,7 +12,7 @@
 }
 
 h4{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Varela Round', sans-serif;
     justify-content: center;
     color: aliceblue;
     margin-top: 40px;
@@ -22,4 +23,8 @@ h4{
     display: flex;
     justify-content: center;
     margin: 40px;
+}
+
+#stars{
+    color: yellow;
 }

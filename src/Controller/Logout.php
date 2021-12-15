@@ -4,7 +4,8 @@ namespace DouglasBernardo\MyMovies\Controller;
 
 use DouglasBernardo\MyMovies\Controller\Requisicao;
 
-class Logout implements Requisicao{
+class Logout implements Requisicao
+{
 
     public function handle(): void
     {

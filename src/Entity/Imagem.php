@@ -7,11 +7,9 @@ use Gumlet\ImageResize;
 class Imagem
 {
 
-    public $imagem;
-
-    public function __construct($img)
+    public function __construct(public $imagem)
     {
-        $this->imagem = (object) $img;
+        $this->imagem = (object) $imagem;
     }
 
     public function getImageData()

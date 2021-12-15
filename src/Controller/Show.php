@@ -13,11 +13,12 @@ class Show implements Requisicao
 
     public function __construct()
     {
-     $this->db  = new QueriesMovies();   
+        $this->db  = new QueriesMovies();   
     }
 
     public function handle(): void
     {
+    
         $filme = $this->db->selectOneMovie($_GET['id']);
 
         echo $this->renderizaHtml("show/aboutMovie",[
