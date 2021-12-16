@@ -1,14 +1,20 @@
 
-function deletar($id){
+function deletar(idMovie){
     $.ajax({
-      data: {id:id},
+      data: {idMovie:idMovie},
       url: '/excluir',
-      type: 'GET',
-      success: function(data) {     
-        console.log(data)
+      type: 'POST',
+      success: function() {     
+        window.location.href = '/excluir?id='+idMovie
       },
       error: function(){
         alert('Erro ao deletar o registro')
       }
     });
 }
+
+
+//Testes
+// function deletar(idMovie,idUser){
+//   console.log("Id from the Movie:"+idMovie+" And Id from the User "+idUser)
+// }
