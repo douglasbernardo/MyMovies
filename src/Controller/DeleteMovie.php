@@ -12,8 +12,9 @@ class DeleteMovie implements Requisicao
     }
     public function handle(): void
     {
-        var_dump($this->db->deleteMovie($_GET['id']));
 
-        header('/location:home');
+        $this->db->deleteMovie($_GET['id']);
+
+        header("Location: /home");
     }
 }
