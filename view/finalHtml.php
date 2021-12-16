@@ -1,4 +1,4 @@
-        
+
         <script src="assets/js/codeJs/ChooseOptions.js"></script>
         <script src="assets/js/codeJs/deleteMovie.js"></script>
         <!-- JavaScript Bundle with Popper -->
