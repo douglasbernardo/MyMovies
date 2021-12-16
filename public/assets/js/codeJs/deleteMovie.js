@@ -3,7 +3,7 @@ function deletar(idMovie){
     $.ajax({
       data: {idMovie:idMovie},
       url: '/excluir',
-      type: 'POST',
+      type: 'GET',
       success: function() {     
         window.location.href = '/excluir?id='+idMovie
       },
@@ -12,9 +12,3 @@ function deletar(idMovie){
       }
     });
 }
-
-
-//Testes
-// function deletar(idMovie,idUser){
-//   console.log("Id from the Movie:"+idMovie+" And Id from the User "+idUser)
-// }
