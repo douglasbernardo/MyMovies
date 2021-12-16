@@ -20,15 +20,16 @@
                     </p>
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body">
-                            Tem certeza que deseja deletar?
-                            <form method="get">
-                                <a class="btn btn-sm btn-outline-primary" onclick="deletar(<?= $filmes->id ?>)" href="" >Sim</a>
+                            <p>certeza que deseja deletar? <?= $filmes->nome ?></p>
+                            <form method="post">
+                                <button class="btn btn-sm btn-outline-primary" onclick="deletar(<?= $filmes->id ?>)" type="button">Sim</button>
                                 <a class="btn btn-sm btn-outline-primary" href="/home" >Não</a>
                             </form>
                         </div>
                     </div>
                 </div>
             </ul>
+            
         </div>
     </div>
     
