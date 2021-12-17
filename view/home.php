@@ -1,6 +1,15 @@
 <?php require_once __DIR__ . './inicioHtml.php' ?>
 
 
+<?php if (isset($_SESSION['mensagem'])) : ?>
+            <div class="alert alert-<?= $_SESSION['tipo']; ?>">
+                <?= $_SESSION['mensagem']; ?>
+            </div>
+    <?php 
+        unset($_SESSION['mensagem']);
+        unset($_SESSION['tipo']);
+        endif;
+    ?>
     <a href="/insercao">
         <button class="btn btn-outline-primary mt-4 mb-3 m-3">
             Inserir um filme ou série

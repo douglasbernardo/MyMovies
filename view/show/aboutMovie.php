@@ -11,19 +11,19 @@
                 <h4>Minha Opinião: <?= $filmes->opiniao ?></h4>
                 <div class="buttons">
                     <p>
-                        <a class="btn btn-outline-primary" href="" role="button" aria-expanded="false">
+                        <button class="btn btn-outline-primary" type="button" role="button" aria-expanded="false">
                             Editar
-                        </a>
+                        </button>
                         <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                             Excluir 
                         </button>
                     </p>
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body">
-                            <p>certeza que deseja deletar? <?= $filmes->nome ?></p>
+                            <p>Deseja excluir <strong><?= $filmes->nome ?></strong>?</p>
                             <form method="post">
                                 <button class="btn btn-sm btn-outline-primary" onclick="deletar(<?= $filmes->id ?>)" type="button">Sim</button>
-                                <a class="btn btn-sm btn-outline-primary" href="/home" >Não</a>
+                                <button class="btn btn-sm btn-outline-primary" style="cursor:pointer" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >Não</button>
                             </form>
                         </div>
                     </div>

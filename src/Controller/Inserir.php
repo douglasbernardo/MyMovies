@@ -69,6 +69,7 @@ class Inserir implements Requisicao
                     $filme->setOpiniao($opiniao),
                 );
 
+                $this->defineMensagem('success','Filme inserido com sucesso');
                 header('location:/home');
 
                 break;
